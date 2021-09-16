@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		CE5B41B326F0763F00CEBC24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41B226F0763F00CEBC24 /* AppDelegate.swift */; };
 		CE5B41B526F0763F00CEBC24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41B426F0763F00CEBC24 /* SceneDelegate.swift */; };
-		CE5B41B726F0763F00CEBC24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41B626F0763F00CEBC24 /* ViewController.swift */; };
 		CE5B41BA26F0763F00CEBC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B41B826F0763F00CEBC24 /* Main.storyboard */; };
 		CE5B41BC26F0763F00CEBC24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5B41BB26F0763F00CEBC24 /* Assets.xcassets */; };
 		CE5B41BF26F0763F00CEBC24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B41BD26F0763F00CEBC24 /* LaunchScreen.storyboard */; };
 		CE5B41CA26F0763F00CEBC24 /* TryTryNumber_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41C926F0763F00CEBC24 /* TryTryNumber_V2Tests.swift */; };
 		CE5B41D526F0763F00CEBC24 /* TryTryNumber_V2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41D426F0763F00CEBC24 /* TryTryNumber_V2UITests.swift */; };
+		CE5B41E326F076CC00CEBC24 /* TryTryNumberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41E226F076CC00CEBC24 /* TryTryNumberData.swift */; };
+		CE5B41E526F0776A00CEBC24 /* TryTryNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B41E426F0776A00CEBC24 /* TryTryNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		CE5B41AF26F0763F00CEBC24 /* TryTryNumber_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryTryNumber_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B41B226F0763F00CEBC24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5B41B426F0763F00CEBC24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE5B41B626F0763F00CEBC24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE5B41B926F0763F00CEBC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE5B41BB26F0763F00CEBC24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5B41BE26F0763F00CEBC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		CE5B41D026F0763F00CEBC24 /* TryTryNumber_V2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryTryNumber_V2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B41D426F0763F00CEBC24 /* TryTryNumber_V2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryTryNumber_V2UITests.swift; sourceTree = "<group>"; };
 		CE5B41D626F0763F00CEBC24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5B41E226F076CC00CEBC24 /* TryTryNumberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryTryNumberData.swift; sourceTree = "<group>"; };
+		CE5B41E426F0776A00CEBC24 /* TryTryNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryTryNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			children = (
 				CE5B41B226F0763F00CEBC24 /* AppDelegate.swift */,
 				CE5B41B426F0763F00CEBC24 /* SceneDelegate.swift */,
-				CE5B41B626F0763F00CEBC24 /* ViewController.swift */,
 				CE5B41B826F0763F00CEBC24 /* Main.storyboard */,
+				CE5B41E226F076CC00CEBC24 /* TryTryNumberData.swift */,
+				CE5B41E426F0776A00CEBC24 /* TryTryNumberViewController.swift */,
 				CE5B41BB26F0763F00CEBC24 /* Assets.xcassets */,
 				CE5B41BD26F0763F00CEBC24 /* LaunchScreen.storyboard */,
 				CE5B41C026F0763F00CEBC24 /* Info.plist */,
@@ -258,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5B41B726F0763F00CEBC24 /* ViewController.swift in Sources */,
+				CE5B41E326F076CC00CEBC24 /* TryTryNumberData.swift in Sources */,
 				CE5B41B326F0763F00CEBC24 /* AppDelegate.swift in Sources */,
+				CE5B41E526F0776A00CEBC24 /* TryTryNumberViewController.swift in Sources */,
 				CE5B41B526F0763F00CEBC24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
