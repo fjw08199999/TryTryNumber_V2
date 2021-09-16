@@ -87,13 +87,13 @@ class TryTryNumberViewController: UIViewController {
                 
             } else {
                 gameTimes = 0
-                gameDisplayLabel.text = "猜超過\( gameTimes )次遊戲結束"
+                gameDisplayLabel.text = "猜超過\( gmaeTimeSet )次遊戲結束"
                 
             }
             
         } else {
             
-            gameDisplayLabel.text = "猜超過\( gameTimes )次遊戲結束"
+            gameDisplayLabel.text = "猜超過\( gmaeTimeSet )次遊戲結束"
         }
             
         } else {
