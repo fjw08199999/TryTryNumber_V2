@@ -13,6 +13,7 @@ class TryTryNumberViewController: UIViewController {
     var picBotNumber: Int = Int.random(in: 1...15)
     var gameTimes: Int = 6
     var gmaeTimeSet: Int = 0
+    var count: Int = 0
     
     let gmaeStareMsgStart: String = "猜猜看我的價值多少？"
     let gmaeStareMsgStartNone: String = "答案不能為空白，請輸數1~100之間的整數"
@@ -77,6 +78,7 @@ class TryTryNumberViewController: UIViewController {
                     gameTimes -= 1
                     gameInputNumberTextField.text = ""
                     gameTimesLabel.text = "\(gameTimes)"
+                    count += 1
                      
                 } else if gameInputNumberText < botNumber {
                     
@@ -84,16 +86,17 @@ class TryTryNumberViewController: UIViewController {
                     gameTimes -= 1
                     gameInputNumberTextField.text = ""
                     gameTimesLabel.text = "\(gameTimes)"
+                    count += 1
                 
             } else {
                 gameTimes = 0
-                gameDisplayLabel.text = "猜超過\( gmaeTimeSet )次遊戲結束"
+                gameDisplayLabel.text = "猜超過\( count )次遊戲結束"
                 
             }
             
         } else {
             
-            gameDisplayLabel.text = "猜超過\( gmaeTimeSet )次遊戲結束"
+            gameDisplayLabel.text = "猜超過\( count )次遊戲結束"
         }
             
         } else {
@@ -111,7 +114,7 @@ class TryTryNumberViewController: UIViewController {
         picBotNumber = Int.random(in: 1...15)
         peopleImageView.image = UIImage(named: "\(picBotNumber).png")
         botNumber = Int.random(in: 1...100)
-        
+        count = 0
     }
 
 }
