@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TryTryNumberViewController: UIViewController {
+class TryTryNumberViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     var botNumber: Int = Int.random(in: 1...100)
     var picBotNumber: Int = Int.random(in: 1...15)
@@ -29,12 +29,17 @@ class TryTryNumberViewController: UIViewController {
     @IBOutlet weak var enterAswerButton: UIButton!
     @IBOutlet weak var reTryButton: UIButton!
     
+    @IBOutlet weak var choicePhotoButtonOutlet: UIButton!
+    @IBOutlet weak var cameraButtonOutlet: UIButton!
     
     @IBOutlet weak var peopleImageView: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        choicePhotoButtonOutlet.setTitle("選擇相片", for: .normal)
+        cameraButtonOutlet.setTitle("拍照", for: .normal)
         
         enterAswerButton.setTitle("你來猜猜看", for: .normal)
         reTryButton.setTitle("重來一次", for: .normal)
@@ -47,6 +52,7 @@ class TryTryNumberViewController: UIViewController {
         
     }
     
+    //收鍵盤
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
@@ -121,5 +127,27 @@ class TryTryNumberViewController: UIViewController {
         count = 0
     }
 
+    @IBAction func choicePhotoButtonAction(_ sender: Any) {
+        let controller = UIImagePickerController()
+        controller.sourceType = .photoLibrary
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func cameraButtonAction(_ sender: Any) {
+        let controller = UIImagePickerController()
+        controller.sourceType = .camera
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.originalImage] as? UIImage
+        peopleImageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
